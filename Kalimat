@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Membuat Kalkulator Konversi Kalimat</title>
+</head>
+<body>
+  <legend><h2>Kalkulator Konversi Kalimat</h2></legend>
+  <script>
+  var Desimal,Biner,Hexa,Octa,i,nilai,tampung;
+  Desimal = [];
+  Biner = [];
+  Hexa = [];
+  Octa = [];
+  
+  var kalimat = prompt("Masukan Kalimat : ");
+  var panjang =kalimat.length;
+  
+  for (i = 0;i< panjang; i++) {
+  
+    nilai = kalimat.charCodeAt(i);
+    Desimal.push(nilai);
+    
+    tampung = parseInt(nilai, 10).toString(2);
+    Biner.push(tampung)；
+    //ambil hexa
+    tampung = parseInt(nilai, 10).toString(16);
+    Hexa.push(tampung);
+    //ambil Octa
+    tampung = parseInt(nilai, 10).toString(8);
+    Octa.push(tampung);
+    }
+    
+  document.write("Desimal = " +Desimal);
+  document.write("Biner = " +Biner);
+  document.write("Hexa = " +Hexa);
+  document.write("Octa = " +Octa);
+    </script>
+   </body>
+   </html>
